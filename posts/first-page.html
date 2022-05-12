@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sublime Tree</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@700&display=swap');
+        
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .font-TT{font-family: 'Old Standard TT', serif;}
+        .font-Abril{font-family: 'Abril Fatface', cursive;}
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            opacity: 0.9;
+            top: 0;
+        }
+        .cont{
+            margin: auto;
+            width: 1200px;
+        }
+        .left-navbar{
+            position: fixed;
+            width: 200px;
+            height: 100%;
+        }
+        .left-ul {
+            position: relative;
+            list-style-type: none;
+            top: 35%;
+            text-align: center;
+        }
+        li a {
+            top: 50%;
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+            font-size: 15px;
+            color: white;
+            cursor: pointer;
+
+        }
+        li a:hover:not(.active) {
+            color: rgb(248, 46, 11);
+        }
+        .msg-cont{
+            position: fixed;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+            text-align: center;
+            color: white;
+        }
+        .msg{
+            transform: scale(1, 1.7);
+            line-height: 100%;
+        }
+        .p-cont{
+            position: fixed;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgb(248, 46, 11);
+        }
+        .logo-cont{
+            position: fixed;
+            margin: 0px 0 0 20px;
+            color: rgb(248, 46, 11);
+            font-size: 25px;
+            cursor: pointer;
+        }
+        .image-cont img{
+            width: 1200px;
+            height: 100%;
+            object-fit:cover;
+        }
+        </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="cont">
+        <div class="left-navbar">
+            <ul class="left-ul font-Abril">
+                <li><a style="color: rgb(248, 46, 11);" href="">HOME</a></li>
+                <li><a href="">WOMEN</a></li>
+                <li><a href="">NEW RELEASE</a></li>
+                <li><a href="">COLLECTION</a></li>
+                <li><a href="">ORIGINALS</a></li>
+                <li><a href="">BLOG</a></li>
+
+            </ul>
+        </div>
+        <div class="logo-cont font-Abril">
+            <h2>SUBLIME TREE</h2>
+        </div>
+        <div class="msg-cont font-TT">
+           <h4 class="msg"><span style="color: rgb(248, 46, 11);">L</span>UXURIO<span style="color: rgb(0, 0, 0);">U</span>S <i>and</i>
+            <br>CONTEMP<span style="color: rgb(248, 46, 11);">O</span>RARY APPEAL
+            <br><i>for</i> E<span style="color: rgb(248, 46, 11);">VE</span>RY WOMAN </h4>
+        </div>
+        <div class="p-cont font-Abril">
+            <h4><i style="color: white;" class="font-TT">presented by </i>SUBLIME TREE</h4>
+        </div>
+        <div class="image-cont">
+            <img class='img-h' src="./011.jpg" alt="">
+            
+        </div>
+    </div>
+    <script>
+        
+        TweenMax.to(".overlay", 5, {
+            top: "-100%",
+            ease: Expo.easeInOut
+        })
+    </script>
+</body>
+</html>
